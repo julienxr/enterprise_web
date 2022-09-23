@@ -1,4 +1,3 @@
-import { NextRouter } from 'next/router';
 import { IoEllipsisHorizontal } from 'react-icons/io5';
 import MenuItem from './MenuItem';
 
@@ -15,10 +14,9 @@ export interface IMenuSection {
       }[];
     }[];
   };
-  router: NextRouter;
 }
 
-const MenuSection: React.FC<IMenuSection> = ({ isOpen, section, router }) => {
+const MenuSection: React.FC<IMenuSection> = ({ isOpen, section }) => {
   {
     /* Can i place router in context? */
   }
@@ -29,17 +27,12 @@ const MenuSection: React.FC<IMenuSection> = ({ isOpen, section, router }) => {
           {section.title}
         </p>
       ) : (
-        <IoEllipsisHorizontal className="text-[#606A8C] ml-6" />
+        <IoEllipsisHorizontal className="text-gray-500 ml-6" />
       )}
-      {/* Sidebar menu sub-categories*/}
+      {/* SideNav menu sub-categories*/}
       <ul>
         {section.links.map((item) => (
-          <MenuItem
-            key={item.name}
-            isOpen={isOpen}
-            item={item}
-            router={router}
-          />
+          <MenuItem key={item.name} isOpen={isOpen} item={item} />
         ))}
       </ul>
     </section>

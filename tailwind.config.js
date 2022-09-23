@@ -4,7 +4,6 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    // Ensure these match with .storybook/preview.js
     screens: {
       xs: '375px',
       sm: '600px',
@@ -12,8 +11,12 @@ module.exports = {
       lg: '1200px',
       xl: '1536px',
     },
+    colors: {
+      'navy-blue': '#1f2433',
+      'light-blue': '#3699FF',
+    },
     fontFamily: {
-      sans: ['Arial', 'sans-serif'],
+      sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
       serif: ['Garamond', 'serif'],
     },
     extend: {
@@ -22,9 +25,15 @@ module.exports = {
           500: '#1a73e8',
         },
         gray: {
-          500: '#f8f9fa',
-          600: '#dadce0',
+          100: '#F5F8FA',
+          200: '#EFF2F5',
+          300: '#E4E6EF',
+          400: '#B5B5C3',
+          500: '#A1A5B7',
+          600: '#7E8299',
+          700: '#5E6278',
         },
+        white: '#fff',
       },
     },
   },

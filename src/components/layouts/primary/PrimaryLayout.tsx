@@ -1,22 +1,25 @@
 import Head from 'next/head';
+import { LayoutProvider } from '../../../context/LayoutContextProvider';
 import { meta } from '../../../utils/globalMeta';
-import { Footer, Navbar, Sidebar } from '../navigation';
+import { Main, SideNav } from '../navigation';
 
 export interface IPrimaryLayout {
   children?: React.ReactNode;
   styles?: string[];
 }
 
-const PrimaryLayout: React.FC<IPrimaryLayout> = () => {
+const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
   return (
     <>
       <Head>
         <title>{meta.title}</title>
       </Head>
-      <Sidebar />
-      <Navbar />
-      <main></main>
-      <Footer />
+      <LayoutProvider>
+        <div className={`flex`}>
+          <SideNav />
+          <Main>{children}</Main>
+        </div>
+      </LayoutProvider>
     </>
   );
 };
