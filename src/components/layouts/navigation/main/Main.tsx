@@ -7,7 +7,7 @@ export interface IMain {
 }
 
 const Main: React.FC<IMain> = ({ children }) => {
-  const { isOpen, remainOpen, screenSize, setScreenSize } = useLayoutContext();
+  const { remainOpen, screenSize, setScreenSize } = useLayoutContext();
 
   useEffect(() => {
     const handleScreenResize = () => setScreenSize(document.body.clientWidth);
@@ -19,8 +19,6 @@ const Main: React.FC<IMain> = ({ children }) => {
   }, [screenSize, setScreenSize]);
 
   const clientWindow = remainOpen ? screenSize - 265 : screenSize - 70;
-
-  console.log(clientWindow);
 
   return (
     <div
