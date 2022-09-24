@@ -63,11 +63,7 @@ const BreadCrumbs: React.FC<IBreadCrumbs> = ({ crumbs }) => {
   );
 };
 
-const SelectCategory: React.FC<ISelectCategory> = ({
-  title,
-  crumbs,
-  categories,
-}) => {
+const SelectCategory: React.FC<ISelectCategory> = ({ title, crumbs }) => {
   return (
     <div className="flex items-stretch py-6">
       <div className="flex justify-between items-center px-7 w-full">
