@@ -12,8 +12,8 @@ const Navbar: React.FC<INavbar> = () => {
   const { remainOpen } = useLayoutContext();
   return (
     <header
-      className={`fixed flex items-stretch top-0 right-0 h-[72px]  bg-white  z-40 ${
-        remainOpen ? 'left-[235px]' : 'left-[70px]'
+      className={`fixed flex items-stretch top-0 right-0 h-[72px] bg-white  z-40 ${
+        remainOpen ? 'left-[265px]' : 'left-[70px]'
       } duration-200`}
     >
       {/* Header Container */}
@@ -34,16 +34,16 @@ const Navbar: React.FC<INavbar> = () => {
         <div className={`flex items-stretch`}>
           <nav className={`flex items-stretch`}>
             <NavItem>
-              <BsSearch className={`text-gray-500`} />
+              <BsSearch />
             </NavItem>
             <NavItem>
-              <IoStatsChartOutline className={`text-gray-500`} />
+              <IoStatsChartOutline />
             </NavItem>
             <NavItem>
-              <BsFillXDiamondFill className={`text-gray-500`} />
+              <BsFillXDiamondFill />
             </NavItem>
             <NavItem>
-              <BiMessageDetail className={`text-gray-500`} />
+              <BiMessageDetail />
             </NavItem>
             <NavItem
               image={AFLOGO}
@@ -52,7 +52,7 @@ const Navbar: React.FC<INavbar> = () => {
               height={30}
             />
             <NavItem>
-              <BsFillSunFill className={`text-gray-500`} />
+              <BsFillSunFill />
             </NavItem>
             <NavItem
               image={PROFILE}

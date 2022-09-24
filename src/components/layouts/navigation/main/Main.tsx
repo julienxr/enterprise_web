@@ -10,7 +10,7 @@ const Main: React.FC<IMain> = ({ children }) => {
   const { isOpen, remainOpen, screenSize, setScreenSize } = useLayoutContext();
 
   useEffect(() => {
-    const handleScreenResize = () => setScreenSize(window.innerWidth);
+    const handleScreenResize = () => setScreenSize(document.body.clientWidth);
     window.addEventListener('resize', handleScreenResize);
 
     handleScreenResize();
@@ -18,23 +18,22 @@ const Main: React.FC<IMain> = ({ children }) => {
     return () => window.removeEventListener('resize', handleScreenResize);
   }, [screenSize, setScreenSize]);
 
-  const workSpaceWidth =
-    isOpen && !remainOpen
-      ? screenSize - 70
-      : remainOpen
-      ? screenSize - 265
-      : screenSize - 70;
+  const clientWindow = remainOpen ? screenSize - 265 : screenSize - 70;
 
-  console.log(workSpaceWidth);
+  console.log(clientWindow);
 
   return (
     <div
-      className={`relative flex-col h-screen w-full ${
+      className={`relative flex-col h-screen w-[${clientWindow}px] ${
         remainOpen ? '' : 'left-[70px]'
       } duration-300`}
     >
       <Navbar />
-      <main className={`relative top-[72px] h-full  bg-gray-200 duration-300`}>
+      <main
+        className={`relative top-[72px] right-0 h-full bg-gray-200 duration-300 ${
+          remainOpen ? `w-[${clientWindow}px]` : ''
+        }`}
+      >
         {children}
       </main>
       <Footer />

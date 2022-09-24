@@ -22,10 +22,11 @@ const NavItem: React.FC<INavItem> = ({
 }) => {
   return (
     <>
+      {/* Buttons */}
       {title && (
         <div className={`flex py-1 mr-2 items-center text-sm`}>
           <span
-            className={`flex items-center p-3 cursor-pointer font-medium ${
+            className={`flex items-center p-3 cursor-pointer font-medium hover:bg-gray-200 hover:rounded-lg hover:text-light-blue ${
               active
                 ? `bg-gray-200 rounded-lg  text-light-blue`
                 : `text-gray-500`
@@ -35,8 +36,9 @@ const NavItem: React.FC<INavItem> = ({
           </span>
         </div>
       )}
+      {/* Images */}
       {image && (
-        <div className={`flex py-1 mx-2 items-center`}>
+        <div className={`flex py-1 mx-2 items-center cursor-pointer`}>
           <Image
             src={image}
             alt={alt}
@@ -46,9 +48,14 @@ const NavItem: React.FC<INavItem> = ({
           />
         </div>
       )}
+      {/* Icons */}
       {children && (
-        <div className={`flex py-1 mx-3 items-center text-xl ${styles}`}>
-          {children}
+        <div className={`flex py-1 mx-3 items-center text-xl  `}>
+          <span
+            className={`flex items-center p-2 cursor-pointer text-gray-500 hover:bg-gray-200 hover:rounded-lg hover:text-light-blue`}
+          >
+            {children}
+          </span>
         </div>
       )}
     </>

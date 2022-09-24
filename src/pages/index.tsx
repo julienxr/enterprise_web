@@ -1,12 +1,9 @@
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
+import SelectCategory, { crumbs } from '../components/select/SelectCategory';
 import { NextPageWithLayout } from '../types/pages';
 
 const Home: NextPageWithLayout = () => {
-  return (
-    <section>
-      <h1>Hello out there</h1>
-    </section>
-  );
+  return <SelectCategory title="All" crumbs={crumbs} />;
 };
 
 export default Home;
