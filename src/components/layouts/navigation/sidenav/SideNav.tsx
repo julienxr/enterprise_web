@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import { CgEventbrite } from 'react-icons/cg';
 import { RiDashboardLine } from 'react-icons/ri';
@@ -23,7 +24,7 @@ const SideNav: React.FC<ISideNav> = () => {
 
   return (
     <div
-      className={`flex-0 top-0 left-0 bottom-0 pb-10 z-50 bg-navy-blue cursor-pointer ${
+      className={`flex-none top-0 left-0 bottom-0 pb-10 z-50 bg-navy-blue cursor-pointer ${
         isOpen ? 'w-[265px]' : 'w-[70px]'
       } ${!remainOpen ? 'fixed' : ''} duration-500`}
       onMouseEnter={() => handleHoverIntoSideNav()}

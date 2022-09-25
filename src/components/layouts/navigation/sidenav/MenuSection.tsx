@@ -1,3 +1,4 @@
+import React from 'react';
 import { IoEllipsisHorizontal } from 'react-icons/io5';
 import MenuItem from './MenuItem';
 

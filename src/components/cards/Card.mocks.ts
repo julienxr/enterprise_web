@@ -1,8 +1,10 @@
-import { IWorkSpace } from './WorkSpace';
+import { ICard } from './Card';
 // Mock props that matches the shape of the Base Interface so to quickly test a version of the component either in app or storybook
 
-const base: IWorkSpace = {};
+const base: ICard = {
+  title: 'Title',
+};
 
-export const mockWorkSpaceProps = {
+export const mockCardProps = {
   base,
 };

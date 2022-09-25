@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import { BsPlusSquareFill } from 'react-icons/bs';
 
@@ -79,9 +80,7 @@ const SelectCategory: React.FC<ISelectCategory> = ({ title, crumbs }) => {
           <div className="flex gap-3 items-center">
             {/*TODO: style dropdown */}
             <select className="border border-white p-1 text-gray-600 w-[175px] text-sm rounded-md transition-colors ease-in-out delay-150 cursor-pointer">
-              <option value="All" selected>
-                Choose category
-              </option>
+              <option value="All">Choose category</option>
               <option
                 className="pt-0 pr-[2px] pb-[1px] pl-[2px]"
                 value="Tickets"

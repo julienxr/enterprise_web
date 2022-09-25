@@ -10,7 +10,7 @@ import { FiEdit, FiPieChart } from 'react-icons/fi';
 
 import { BsBarChart, BsDot, BsKanban } from 'react-icons/bs';
 
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { BiColorFill } from 'react-icons/bi';
 import { GiLouvrePyramid } from 'react-icons/gi';
 import { IoMdContacts } from 'react-icons/io';
@@ -33,13 +33,13 @@ export const links = [
             ),
           },
           {
-            name: 'example 1',
+            name: 'example 2',
             icon: (color: string): ReactNode => (
               <BsDot className={`${color}`} />
             ),
           },
           {
-            name: 'example 1',
+            name: 'example 3',
             icon: (color: string): ReactNode => (
               <BsDot className={`${color}`} />
             ),
@@ -53,7 +53,7 @@ export const links = [
         ),
         subcategory: [
           {
-            name: 'example 2',
+            name: 'example 4',
             icon: (color: string): ReactNode => (
               <BsDot className={`${color}`} />
             ),
@@ -79,7 +79,7 @@ export const links = [
         ),
         subcategory: [
           {
-            name: 'example 3',
+            name: 'example 5',
             icon: (color: string): ReactNode => (
               <BsDot className={`${color}`} />
             ),

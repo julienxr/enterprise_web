@@ -1,3 +1,4 @@
+import React from 'react';
 import { BiMessageDetail } from 'react-icons/bi';
 import { BsFillSunFill, BsFillXDiamondFill, BsSearch } from 'react-icons/bs';
 import { IoStatsChartOutline } from 'react-icons/io5';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 import { Footer, Navbar } from '..';
 import { useLayoutContext } from '../../../../context/LayoutContextProvider';
@@ -18,18 +19,17 @@ const Main: React.FC<IMain> = ({ children }) => {
     return () => window.removeEventListener('resize', handleScreenResize);
   }, [screenSize, setScreenSize]);
 
-  const clientWindow = remainOpen ? screenSize - 265 : screenSize - 70;
+  //const clientWindow = remainOpen ? screenSize - 265 : screenSize - 70;
 
   return (
     <div
-      className={`relative flex-col h-screen w-[${clientWindow}px] ${
-        remainOpen ? '' : 'left-[70px]'
-      } duration-300`}
+      className={`grow flex-col h-screen 
+       duration-300`}
     >
       <Navbar />
       <main
         className={`relative top-[72px] right-0 h-full bg-gray-200 duration-300 ${
-          remainOpen ? `w-[${clientWindow}px]` : ''
+          remainOpen ? `` : `ml-[70px]`
         }`}
       >
         {children}
